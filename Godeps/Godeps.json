@@ -1,0 +1,6 @@
+{
+	"ImportPath": "bitbucket.org/webapi",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": []
+}
