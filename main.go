@@ -12,7 +12,7 @@ func main() {
 		w.Header().Set("Content-type", "application/json")
 		json.NewEncoder(w).Encode(map[string]string{"message": "Hello"})
 	})
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
 		panic(err)
 	}
