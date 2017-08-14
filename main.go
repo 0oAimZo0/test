@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 		w.Header().Set("Content-type", "application/json")
 		json.NewEncoder(w).Encode(map[string]string{"message": "Hello"})
 	})
-	err := http.ListenAndServe(":9000", nil)
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
 		panic(err)
 	}
